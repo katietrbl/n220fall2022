@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		#square{
+			height: 100px; /*Setting height to 100px initially*/
+			width: 100px; /*Setting Width to 100px initially */
+			background-color: green; 
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="square" onclick="expand()"></div>
+    <!------========== JavaScript Code using Script tag=======--->
+	<script type="text/javascript">
+		//create expand function
+		function expand() {
+			//accessing the div using id square
+			var x = document.getElementById('square');
+			//here im making it so that the square will get larger by 10% with every click
+			var div_width = x.offsetWidth + (0.1 * x.offsetWidth)+"px";
+			var div_height = x.offsetHeight + (0.1 * x.offsetHeight)+"px";
+			x.style.width = div_width;
+			x.style.height = div_height;
+		}
+	</script>
+</body>
+</html>

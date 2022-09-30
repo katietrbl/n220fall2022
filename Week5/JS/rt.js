@@ -9,6 +9,15 @@ function draw(){
     background(250);
     drawtallOne(tallOne);
     drawtallTwo(tallTwo);
+    if(keyIsDown(UP_ARROW)){
+        tallOne.y -=5;
+        tallTwo.y =+ 5;
+    }
+    if (keyIsDown(DOWN_ARROW)){
+        tallTwo.y -=5;
+        tallOne.y =+ 5;
+    }
+
 }
 
 function drawtallOne(tallOne){
