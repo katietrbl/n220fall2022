@@ -5,8 +5,8 @@
 	<style type="text/css">
 		
 		#square{
-			height: 100px; /*Setting height to 100px initially*/
-			width: 100px; /*Setting Width to 100px initially */
+			height: 100px; /*set beginning height*/
+			width: 100px; /*set the beginning width */
 			background-color: green; 
 			cursor: pointer;
 		}
@@ -15,11 +15,11 @@
 <body>
 	
 	<div id="square" onclick="expand()"></div>
-    <!------========== JavaScript Code using Script tag=======--->
+    
 	<script type="text/javascript">
 		//create expand function
 		function expand() {
-			//accessing the div using id square
+			//create the element from the div id
 			var x = document.getElementById('square');
 			//here im making it so that the square will get larger by 10% with every click
 			var div_width = x.offsetWidth + (0.1 * x.offsetWidth)+"px";
