@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+.card{/*style for every card*/
+
+height: 100px;
+
+width: 200px;
+
+border: 1px solid black;
+
+margin: 20px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+cursor: pointer;
+
+}
+
+.main-div{/*styles for the body*/
+
+display: flex;
+
+flex-wrap: wrap;
+
+}
+
+.click{/*styles for the clicked element*/
+
+background-color: pink;
+
+font-weight: normal;
+
+}
+
+#clickedItem{
+
+font-size: 25px;
+
+font-weight: bold;
+
+display: flex;
+
+justify-content: center;
+
+width: 100vw;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="clickedItem">
+
+</div>
+
+<!-- creating the divs with the words inside... pokemonz!!! -->
+
+<div class="main-div">
+
+<div class="card" id="1" onclick="addRemove(1)" >
+
+Pikachu
+
+</div>
+
+<div class="card" id="2" onclick="addRemove(2)">
+
+Charizard
+
+</div>
+
+<div class="card" id="3" onclick="addRemove(3)">
+
+Squirtle
+
+</div>
+
+    <div class="card" id="4" onclick="addRemove(4)">
+
+Bulbasur
+
+</div>
+
+    <div class="card" id="5" onclick="addRemove(5)">
+
+Gengar
+
+</div>
+
+    <div class="card" id="6" onclick="addRemove(6)">
+
+Mew
+
+</div>
+
+</div>
+
+<script>
+
+const addRemove=(id)=>{
+
+const clickedItem=document.getElementById("clickedItem");
+
+for(let i=1;i<=6;i++){
+
+/*this loop iterates for the every div in the html*/
+
+const element=document.getElementById(i)
+
+if(i==id){
+
+element.classList.add('click');/*adding the click class for clicked div*/
+
+clickedItem.textContent=element.textContent
+
+}
+
+else{
+
+element.classList.remove('click');/*removing click class for remining divs*/
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
