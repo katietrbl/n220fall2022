@@ -1,41 +1,31 @@
-let numbers = [0, 1, 2, 4, 5, 15, 20, 25, 30];
+//fortune cookie app
 
-let counter = 0;
+//creating array with random fortunes
 
-countArray(numbers);
+fortuneArray = ["You will find luck today!", "Good luck young grasshopper...", 
+"Your house is going to explode. Soon. I can't say when, but soon.", "Public transit is the devil.", "You need to eat fiber.",
+"It is all your fault Samantha.", "There are bugs in your skin. There are bugs in your skin. There are bugs in your skin. There are bugs in your skin." ];
 
-function countArray(num){
-    for(let i = 0; i <   numbers.length;i++){
-        if(num[i] > 20){
-            counter++;
-        }
-    }
-    console.log(counter);
+
+//setting the cookie div to an element on the js
+let cookieEl = document.getElementById("fortune");
+//test that the connection works by console.log
+console.log(cookieEl);
+
+
+//create function to get the user a fortune
+function getFortune(){
+        //here, this is making the math happen so that the user will get a completely random fortune
+        var randomFortune = fortuneArray[Math.floor(Math.random()*fortuneArray.length)];
+        //this displays the text of their fortune on the page
+        cookieEl.innerHTML = randomFortune;
+    
 }
-/*
-let ages = [];
 
-for(let i = 0; i < 20; i++) {
-  ages.push( Math.floor(Math.random() * 50 ));
-  
-  console.log(ages)
+//here im making the button for if the user wants to create a new fortune. i start with an empty array so it will pop up with what they typed
+var fortarray = [];
+function addFortune(){
+    fortarray.push(document.getElementById("userinput").value); 
+   console.log(fortarray); 
+   cookieEl.innerHTML = fortarray;
 }
-*/
-//log out the contents of ages.. what is in it? (20) [16, 0, 3, 19, 37, 48, 28, 34, 7, 13, 45, 9, 38, 30, 45, 36, 38, 35, 22, 46]
-
-//When a button is pressed
-    // loop through the ages
-    //add one to age
-    //if their age is greater than 55
-          // on a 50% chance
-          // remove them from the array
-
-                  //(Lookup javascript array splice)
-
-//When a different button is pressed
-   // clear out old data in the div
-    // write the content of the array to the screen
-
-//when a  third button is pressed
-
-  // add a new age between 1 and 50

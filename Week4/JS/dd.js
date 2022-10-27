@@ -20,20 +20,39 @@ var car = {
 
 function setup() {
  createCanvas (800,600);
-
+ 
 }
 //here im just making it draw the car multiple times
 function draw() {
-
+    background(100);
+    noFill();
+    stroke(100);
+    strokeWeight(5);
     drawCar(100, 200);
-    drawCar(50, 50);
-    drawCar(300,300)
+    drawCar2(400, 450);
+    drawCar3(300,300)
 }
 
 //this part just makes the shape of the car
 function drawCar(x,y) {
 //drawing the car!
-rect(x, y, 90, 40);
-ellipse(x+8, y+40, 20);
-ellipse(x+80, y+40, 20);
+rect(mouseX, mouseY, 90, 40);
+ellipse(mouseX+8, mouseY+40, 20);
+ellipse(mouseX+80, mouseY+40, 20);
 }
+
+function drawCar2(x,y) {
+    //drawing the car!
+    rect(mouseX, mouseY, 90, 40);
+    ellipse(mouseX+8, mouseY+40, 20);
+    ellipse(mouseX+80, mouseY+40, 20);
+    }
+
+function drawCar3(x,y) {
+        //drawing the car!
+        rect(mouseX, mouseY, 90, 40);
+        ellipse(mouseX+8, mouseY+40, 20);
+        ellipse(mouseX+80, mouseY+40, 20);
+        }
+
+
