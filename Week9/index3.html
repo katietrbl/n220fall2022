@@ -19,13 +19,10 @@
 </head>
   
 <body>
-<h1>Guess The Number</h1>
-  
-<p>We have selected a random number between 1 - 10. 
-See if you can guess it.</p>
+<p>Guess a random number between 1 and 20.</p>
   
 <div class="form">
-    <label for="guessField">Enter a guess: </label>
+    <label for="guessField">Enter your number here: </label>
     <input type = "text" id = "guessField" class = "guessField">
     <input type = "submit" value = "Submit guess" 
            class = "guessSubmit" id = "submitguess">
@@ -34,7 +31,7 @@ See if you can guess it.</p>
 <script type = "text/javascript">
   
     // random value generated
-    var y = Math.floor(Math.random() * 10 + 1);
+    var y = Math.floor(Math.random() * 20 + 1);
       
     // counting the number of guesses
     // made for correct Guess

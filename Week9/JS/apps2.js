@@ -5,24 +5,14 @@ When the button is clicked (assuming the value typed into the input
 
 "Tip: $X. Total: $X"  */
 
-var myBtn = document.getElementById('my-button');
-var tipElem = document.getElementById("tip");
-var totalElem = document.getElementById("total");
+//set div ids to be manipulated
+let balancedue = document.getElementById("balancedue");
+let gratuity = document.getElementById("gratuity");
 
-//attach click event listener
-myBtn.addEventListener('click', calc);
-
-//the event object is passed to this automatically - I'm assigning it to "e"
-function calc(e) {
-  //prevent the default action - form submit / page refresh
-  e.preventDefault();
-  var input = document.getElementById('bill');
-  //convert string value to Number
-  var bill = parseFloat(input.value);
-  var tip = bill * 0.15;
-  var total = bill + tip;
-
-  //textContent is better than innerHTML for setting text
-  tipElem.textContent = "$"+(tip).toFixed(2);
-  totalElem.textContent = "$"+(total).toFixed(2);  
+//function for calculating the total for the bill
+function getTotal() {
+    //this function does the math for us of adding the gratuity to the balance due
+    let total = parseFloat(balancedue.value) + parseFloat(gratuity.value);
+    document.getElementById("result").innerHTML = "Tip: $" + gratuity.value + ". " + "Total: $" + balancedue + ".";
+    console.log("Tip: $" + gratuity.value + ". " + "Total: $" + total + ".");
 }

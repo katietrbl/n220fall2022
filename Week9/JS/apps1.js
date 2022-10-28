@@ -4,13 +4,12 @@ When the button is clicked, output the phrase
 "Hello {Name}" to the developer console, with {Name} 
 being the value the user put into the input field. */
 
-
-//begin with setting the div of hello. 
+var namesArray = [];
 let speakEl = document.getElementById("hello");
-
 console.log(speakEl);
 
-function sayHello(){
-    speakEl.push(document.getElementById("userinput").value); 
-    speakEl.innerHTML = "Hello " + ("userinput") 
+function addName(){
+    namesArray.push(document.getElementById("userinput").value);
+    console.log(namesArray);
+    speakEl.innerHTML = namesArray;
 }
