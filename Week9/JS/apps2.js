@@ -13,6 +13,7 @@ let gratuity = document.getElementById("gratuity");
 function getTotal() {
     //this function does the math for us of adding the gratuity to the balance due
     let total = parseFloat(balancedue.value) + parseFloat(gratuity.value);
+    //add the balance due and gratuity
     document.getElementById("result").innerHTML = "Tip: $" + gratuity.value + ". " + "Total: $" + balancedue + ".";
     console.log("Tip: $" + gratuity.value + ". " + "Total: $" + total + ".");
 }

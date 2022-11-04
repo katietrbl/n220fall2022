@@ -11,5 +11,6 @@ console.log(speakEl);
 function addName(){
     namesArray.push(document.getElementById("userinput").value);
     console.log(namesArray);
-    speakEl.innerHTML = namesArray;
+    speakEl.innerHTML = "Hello " + namesArray;
 }
+

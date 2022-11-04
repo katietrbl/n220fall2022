@@ -6,6 +6,19 @@ Remove the text in the input when the user clicks the button. */
 
 let submitEl = document.getElementById("submitguess");
 
-function giveResult(){
-    submitEl.innerHTML = "guessfield";
+var number = 8;
+
+function guess() {
+    let num = parseInt(document.getElementById("num").value);
+    if (num > 20 || num <= 0) {
+        return submitEl.innerHTML = "Enter a number between one and twenty.";
+    } else if (num === number) {
+        return submitEl.innerHTML = "Correct, good job!";
+    } else if (num !== number) {
+        if (num > number) {
+            return submitEl.innerHTML = "This is the wrong answer, try a smaller number!";
+        } else if (num < number) {
+            return submitEl.innerHTML = "This is the wrong answer, try a larger number!";
+        }
+    }
 }
