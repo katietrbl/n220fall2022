@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer</title>
+</head>
+<style>
+/* make the box of color */
+#color{
+    width: 600px;
+    height: 600px;
+    background-color: black;
+}
+/* the text below showing the hue of the box */
+#rgb{
+    width: 270px;
+    height: 20px;
+    background-color: lightgrey;
+    
+}
+
+</style>
+<body>
+    <div id="color"></div>
+
+    <div>
+        <h3 id="rgb"></h3>
+    </div>
+
+<!--red buttons-->
+    <label id="red">Red:</label></br>
+    <button type="button" onclick="morph(event)" data-color="red" data-num="1">Add +1</button>
+    <button type="button" onclick="morph(event)" data-color="red" data-num="5">Add +5</button>
+    <button type="button" onclick="morph(event)" data-color="red" data-num="10">Add +10</button></br>
+
+<!--green buttons-->
+    <label id="green">Green:</label></br>
+    <button type="button" onclick="morph(event)" data-color="green" data-num="1">Add +1</button>
+    <button type="button" onclick="morph(event)" data-color="green" data-num="5">Add +5</button>
+    <button type="button" onclick="morph(event)" data-color="green" data-num="10">Add +10</button></br>
+
+<!--blue buttons-->
+    <label id="blue">Blue:</label></br>
+    <button type="button" onclick="morph(event)" data-color="blue" data-num="1">Add +1</button>
+    <button type="button" onclick="morph(event)" data-color="blue" data-num="5">Add +5</button>
+    <button type="button" onclick="morph(event)" data-color="blue" data-num="10">Add +10</button>
+
+    <script src="JS/apps2.js"></script>
+</body>
+</html>
