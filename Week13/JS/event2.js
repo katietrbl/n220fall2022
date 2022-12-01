@@ -1,0 +1,64 @@
+
+//application vars
+let dvWheel = document.getElementById("wheel");
+let colors = [ "#f9ff40", "#ffcc40", "#ff821c", "#ff591c", "#d11b1b", "#940f5a",  "#611069", "#4d0e9e", "#1430e3", "#14d9e3", "#05a80a", "#b4fa3c" ];
+let selectedColorIndex = 0;
+let hElement = documentt.getElementByClass("harmony");
+
+
+//setup
+colors.forEach( function(color, i) {
+  let rot = (i / colors.length) * 360;
+  
+  let newSelection = document.createElement("div");
+  newSelection.style.backgroundColor = color;
+  newSelection.style.transform = `rotate(${rot}deg) translate(8em)`;
+  newSelection.dataset.color = color;
+  newSelection.dataset.index = i;
+  //newSelection.innerHTML = color;
+  newSelection.classList.add("option");
+  wheel.appendChild(newSelection);
+  
+  //add event listener to newSelection
+  newSelection.addEventListener("click", selectColor)
+})
+
+//functions
+function selectColor(event){
+
+}
+//make handler for clicking on new selection
+
+
+
+function comp(){
+ 
+console.log(selectedColorIndex);
+
+//half way
+let compIndex = selectedColorIndex + 6;
+
+//dont overflow
+if(compIndex > 12){
+    compIndex = compIndex % 12;
+}
+//get color
+let compColor = colors[compIndex];
+
+hElements[1].style.backgroundColor = color[compIndex];
+}
+
+function split(){
+
+}
+
+function analogous(){
+
+}
+
+//
+//Use the 'index' property of the dataset to get color position in the array
+
+//for analogous - two away from current
+//for complementary - half away from current
+//for split - half away from current, then +/- 2
