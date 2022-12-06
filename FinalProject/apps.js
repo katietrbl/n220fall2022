@@ -48,7 +48,7 @@ function render(){
         //set text content of square of the position to the mark on the board
         squares[index].textContent = mark;
     });
-    messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
+    messages.textContent = win === 'T' ? `That's a tie!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
 }
 
 //this function tells the program who is going when
@@ -66,10 +66,13 @@ function handleTurn(event){
 }
 
 function getwinner(){
+    //begin with no winner
     let winner = null;
+    //based on the combination of who picks what, results in the winner or if its a tie
     winningCombos.forEach(function(combo, index) {
         if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]) winner = board[combo[0]];
         });
+        //if no winner tie
         return winner ? winner : board.includes('') ? null : 'T';
 }
 
