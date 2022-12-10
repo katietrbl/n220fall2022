@@ -21,7 +21,7 @@ const winningCombos = [
 //initiate game state
 let board;
 //begin game with x
-let turn = 'X';
+let turn = "X";
 //create win condition
 let win;
 
@@ -57,24 +57,29 @@ function render(){
 function handleTurn(event){
     let idx = squares.findIndex(function(square) {
         return square === event.target;
-    });
+        });
 
-    if(handleTurn < 1){
-        dblclick(function(e){
-        e. preventDefault(); }); 
-    }
+    if(board[idx] == "X" || board[idx] == "O") return;
 
     board[idx] = turn;
     //if it is x's turn we assign turn to o.
     //if it is not x's turn then assign turn to o.
     //this makes it easier to deal with who goes when
     turn = turn === 'X' ? 'O' : 'X';
-
-    //make fct to make so each player cant overwrite
+    
+    //make fct to make so each player cant overwrite by using event listener by grabbing div class for squares so if there is content in them it cant be clicked again
+    //rerun handleTurn to prevent errors
 
 
     win = getwinner();
     render();
+}
+
+if(handleTurn < 1){
+    dblclick(function(e){
+    e.preventDefault(); 
+    turn === turn;
+}); 
 }
 
 function getwinner(){
